@@ -1,0 +1,197 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h5, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    background: linear-gradient( rgba(198, 108, 73, 0.4), rgba(198, 108, 73, 0.4)), url(image/back_ground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 375px;
+    height: 275px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav button {
+    position: absolute;
+    width: 24px;
+    left: 33px;
+    top: 38px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+    background-color: unset;
+    border: unset;
+    color: white;
+}
+
+nav h1 {
+    /* width: 116px; */
+    display: flex;
+    padding-top: 37px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+header section {
+    /* position: relative; */
+    flex-wrap: wrap;
+    /* width: 300px; */
+    height: 24px;
+    padding-left: 78px;
+    padding-top: 33px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+header .designer {
+    /* position: relative; */
+    padding-left: 18px;
+    padding-top: 13px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+header a {
+    position: relative;
+    left: 68px;
+    top: 35px;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+section {
+    margin-top: 20px;
+}
+
+section h2 {
+    width: 72px;
+    height: 29px;
+    padding-left: 151px;
+    margin-bottom: 29px;
+    top: 5px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+}
+
+article p {
+    width: 346px;
+    height: 110px;
+    margin-top: -5px;
+    padding-left: 34px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: justify;
+    color: #333333;
+}
+
+.skills {
+    position: relative;
+    background-color: #FFFAF2;
+    padding: 7px;
+}
+
+.skills h2 {
+    width: 62px;
+    height: 29px;
+}
+
+.skills img {
+    position: relative;
+    width: 224px;
+    height: 218px;
+    left: 58px;
+    top: -25px;
+}
+
+.skills .head-tools {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.skills .block {
+    position: relative;
+    top: -3.5px;
+    left: 21px;
+}
+
+.skills h3 {
+    position: relative;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.skills .tools {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 25px;
+}
