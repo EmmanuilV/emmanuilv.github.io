@@ -151,37 +151,38 @@ article p {
     position: relative;
     background-color: #FFFAF2;
     padding: 7px;
+    margin: 4px;
 }
 
 .skills h2 {
-    width: 62px;
-    height: 29px;
+    margin: 20px;
+    padding-left: 126px;
+    
 }
 
 .skills img {
-    position: relative;
-    width: 224px;
-    height: 218px;
-    left: 58px;
-    top: -25px;
+    margin-top: 3px;
+    padding-left: 60px;
 }
 
 .skills .head-tools {
-    position: relative;
     display: flex;
     justify-content: space-between;
+    width: 331px;
+    padding-top: 23px;
     font-size: 12px;
     line-height: 25px;
+    padding-left: 23px;
+    margin-bottom: 13px;
 }
 
 .skills .block {
-    position: relative;
-    top: -3.5px;
-    left: 21px;
+    padding-top: 18px;
+    padding-left: 23px;
+    width: 332px;
 }
 
 .skills h3 {
-    position: relative;
     font-weight: 600;
     font-size: 12px;
     line-height: 25px;
@@ -189,9 +190,65 @@ article p {
 }
 
 .skills .tools {
-    position: relative;
     display: flex;
     justify-content: space-between;
+    width: 278px;
     font-size: 12px;
     line-height: 25px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.skills .tools2 {
+    display: flex;
+    justify-content: space-between;
+    width: 282px;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-top: 9px;
+}
+
+.skills .tools3 {
+    display: flex;
+    justify-content: space-between;
+    width: 213.5px;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-top: 8px;
+}
+
+.tools-diagram {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills .diagram {
+    width: 210px;
+    height: 18px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background: #F5D6AB;
+}
+
+.sub-diagram1 {
+    width: 135.3px;    
+    height: 18px;
+    background: #C66C49;
+    margin-top: -5px;
+}
+
+.sub-diagram2 {
+    width: 165.27px;    
+    height: 18px;
+    background: #C66C49;
+    margin-top: -5px;
+}
+
+.sub-diagram3 {
+    width: 179.39px;    
+    height: 18px;
+    background: #C66C49;
+    margin-top: -5px;
 }
