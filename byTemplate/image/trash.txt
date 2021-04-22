@@ -1,0 +1,463 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h5, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    background: linear-gradient( rgba(198, 108, 73, 0.4), rgba(198, 108, 73, 0.4)), url(image/back_ground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10%;
+    height: 275px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav .links {
+    display: none;
+}
+
+header nav button {
+    position: absolute;
+    width: 24px;
+    left: 33px;
+    top: 38px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+    background-color: unset;
+    border: unset;
+    color: white;
+}
+
+nav h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.header-info {
+    margin-top: 13%;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+header .designer {
+    padding-top: 3.5%;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin-bottom: 9%;
+}
+
+header a {
+    margin-top: 41px;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0% 8%;
+}
+
+h2 {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+}
+
+article p {
+    height: 111px;
+    margin-top: -10px;
+    margin-left: 4px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: justify;
+}
+
+.skills {
+    background-color: #FFFAF2;
+    margin-top: -3px;
+    height: 617px;
+    text-align: center;
+    padding-right: 33px;
+}
+
+.skills h2 {
+    margin: 1.5%;
+    text-align: center;
+}
+
+.skills img {
+    margin-top: 11%;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.skills .head-tools {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 23px;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 13px;
+}
+
+.skills .block {
+    padding-top: 17px;
+    width: 100%;
+}
+
+.skills .block p {
+    width: 210px;
+}
+
+.skills h3 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.skills .tools {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.tools-diagram {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills .diagram {
+    width: 210px;
+    height: 18px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background: #F5D6AB;
+}
+
+.sub-diagram1 {
+    width: 135.3px;
+    height: 18px;
+    background: #C66C49;
+    margin-top: -5px;
+}
+
+.sub-diagram2 {
+    width: 165.27px;
+    height: 18px;
+    background: #C66C49;
+    margin-top: -5px;
+}
+
+.sub-diagram3 {
+    width: 179.39px;
+    height: 18px;
+    background: #C66C49;
+    margin-top: -5px;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    margin-top: 15px;
+}
+
+.portfolio h3 {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+}
+
+.portfolio p {
+    width: 307px;
+    margin: 19px 0px;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.portfolio .image {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 250px;
+    width: 100%;
+}
+
+.portfolio .img1 {
+    height: 28%;
+    margin-left: 3px;
+}
+
+.portfolio .img2 {
+    height: 45%;
+    margin-left: 12px;
+}
+
+.portfolio .img3 {
+    height: 45%;
+    margin-left: 5px;
+}
+
+.portfolio .img4 {
+    height: 28%;
+    margin-left: 12px;
+    margin-top: 0;
+}
+
+.get-in-touch {
+    background: #FFFAF2;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.get-in-touch h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 14px;
+}
+
+.get-in-touch .top-sec {
+    display: flex;
+    height: 180px;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-left: 31px;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.get-in-touch a {
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.get-in-touch .top-sec a {
+    margin: 9.5px;
+}
+
+.get-in-touch .top-sec div {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.get-in-touch .top-sec section {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.get-in-touch .bot-sec {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-left: 38px;
+    margin-bottom: 50px;
+}
+
+.get-in-touch .bot-sec a {
+    margin: 3.5px;
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        max-width: none;
+    }
+    header {
+        background: linear-gradient( rgba(198, 108, 73, 0.4), rgba(198, 108, 73, 0.4)), url(image/bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        padding-top: 6.5%;
+        padding-left: 11.5%;
+        display: flex;
+        align-self: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    header nav {
+        justify-content: flex-start;
+    }
+    nav button {
+        display: none;
+    }
+    header nav .links {
+        display: inline;
+        margin-left: 430px;
+        width: 650px;
+    }
+    header nav .links a {
+        margin: 32.5px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .header-info {
+        margin-top: 11.2%;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0%;
+        font-size: 64px;
+        line-height: 78px;
+        margin-bottom: 228px;
+    }
+    .header-info .designer {
+        padding-top: 4%;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 8.5%;
+    }
+    .header-info a {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    section {
+        justify-content: flex-start;
+        align-items: left;
+        text-align: left;
+        padding-top: 4.7%;
+        padding-left: 11.5%;
+    }
+    h2 {
+        text-align: left;
+        justify-self: self-start;
+        align-self: flex-start;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    article p {
+        height: 5px;
+        margin-top: 49px;
+        margin-left: 0px;
+        font-size: 18px;
+        line-height: 30px;
+        padding-right: 4.5%;
+        margin-bottom: 115px;
+    }
+    .about {
+        margin-bottom: 8%;
+    }
+    .skills {
+        padding-top: 6%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+
+    }
+    .skills h2 {
+        margin: 0%;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0%;
+    }
+    .skills img {
+        height: 60%;
+        margin-right: 10%;
+    }
+    .all-diagrams {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    .skills .head-tools {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 0;
+        font-size: 18px;
+        line-height: 25px;
+    }
+}

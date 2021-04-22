@@ -52,12 +52,17 @@ header {
     background: linear-gradient( rgba(198, 108, 73, 0.4), rgba(198, 108, 73, 0.4)), url(image/back_ground.png);
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 10%;
     height: 275px;
 }
 
-nav {
+header nav {
     display: flex;
     justify-content: center;
+}
+
+header nav .links {
+    display: none;
 }
 
 header nav button {
@@ -74,7 +79,6 @@ header nav button {
 }
 
 nav h1 {
-    padding-top: 37px;
     font-size: 24px;
     font-weight: 700;
     line-height: 29px;
@@ -84,19 +88,20 @@ nav h1 {
     box-sizing: border-box;
 }
 
-header section {
-    padding-top: 29px;
+.header-info {
+    margin-top: 13%;
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
+    text-align: center;
 }
 
 header .designer {
-    text-align: center;
-    padding-top: 13px;
+    padding-top: 3.5%;
     font-size: 13px;
     line-height: 16px;
     color: #FFFFFF;
+    margin-bottom: 9%;
 }
 
 header a {
@@ -141,11 +146,9 @@ article p {
     font-size: 12px;
     line-height: 15px;
     text-align: justify;
-    color: #333333;
 }
 
 .skills {
-    position: relative;
     background-color: #FFFAF2;
     margin-top: -3px;
     height: 617px;
@@ -153,12 +156,12 @@ article p {
 }
 
 .skills h2 {
-    margin: 20px;
+    margin: 1.5%;
     text-align: center;
 }
 
 .skills img {
-    margin-top: 7px;
+    margin-top: 11%;
     text-align: center;
     margin-bottom: 4px;
 }
@@ -174,7 +177,7 @@ article p {
 }
 
 .skills .block {
-    padding-top: 19px;
+    padding-top: 17px;
     width: 100%;
 }
 
@@ -289,7 +292,7 @@ article p {
 
 .get-in-touch {
     background: #FFFAF2;
-    padding-top: 23.53px;
+    padding-top: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -299,9 +302,7 @@ article p {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
-    width: 142px;
-    margin-bottom: 7px;
-
+    margin-bottom: 14px;
 }
 
 .get-in-touch .top-sec {
@@ -331,6 +332,7 @@ article p {
     justify-content: start;
     flex-direction: column;
 }
+
 .get-in-touch .top-sec section {
     display: flex;
     justify-content: start;
@@ -347,4 +349,114 @@ article p {
 
 .get-in-touch .bot-sec a {
     margin: 3.5px;
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        max-width: none;
+    }
+    header {
+        background: linear-gradient( rgba(198, 108, 73, 0.4), rgba(198, 108, 73, 0.4)), url(image/bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        padding-top: 6.5%;
+        padding-left: 11.5%;
+        display: flex;
+        align-self: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    header nav {
+        justify-content: flex-start;
+    }
+    nav button {
+        display: none;
+    }
+    header nav .links {
+        display: inline;
+        margin-left: 430px;
+        width: 650px;
+    }
+    header nav .links a {
+        margin: 32.5px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .header-info {
+        margin-top: 11.2%;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0%;
+        font-size: 64px;
+        line-height: 78px;
+        margin-bottom: 228px;
+    }
+    .header-info .designer {
+        padding-top: 4%;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 8.5%;
+    }
+    .header-info a {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    section {
+        justify-content: flex-start;
+        align-items: left;
+        text-align: left;
+        padding-top: 4.7%;
+        padding-left: 11.5%;
+    }
+    h2 {
+        text-align: left;
+        justify-self: self-start;
+        align-self: flex-start;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    article p {
+        height: 5px;
+        margin-top: 49px;
+        margin-left: 0px;
+        font-size: 18px;
+        line-height: 30px;
+        padding-right: 4.5%;
+        margin-bottom: 115px;
+    }
+    .about {
+        margin-bottom: 8%;
+    }
+    .skills {
+        padding-top: 6%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+
+    }
+    .skills h2 {
+        margin: 0%;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0%;
+    }
+    .skills img {
+        height: 60%;
+        margin-right: 10%;
+    }
+    .all-diagrams {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    .skills .head-tools {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 0;
+        font-size: 18px;
+        line-height: 25px;
+    }
 }
