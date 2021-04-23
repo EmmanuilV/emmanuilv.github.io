@@ -49,7 +49,7 @@ function completeTask(target) {
     }
 }
 
-function showAllTasks(target) {
+function hideTasks(target) {
     let section = document.querySelectorAll('section');
     for (let i = 0; i < section.length; i++) {
         if(todoList[i].done) {
@@ -58,7 +58,7 @@ function showAllTasks(target) {
     }
 }
 
-function hideTask(done) {
+function howAllTasks(done) {
     let section = document.querySelectorAll('section');
     for (let i = 0; i < section.length; i++) {
         if(todoList[i].done) {
