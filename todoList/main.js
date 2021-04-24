@@ -33,11 +33,6 @@ function generateId(task) {
     index++;
 }
 
-/* function completeTask(target) {
-    console.log(target.closest('SECTION'))
-    target.closest('SECTION').style.display = 'none';
-} */
-
 function completeTask(target) {
     let id = target.parentElement.parentElement.id;
     if (todoList[id - 1].done) {
@@ -58,7 +53,7 @@ function hideTasks(target) {
     }
 }
 
-function howAllTasks(done) {
+function showAllTasks(done) {
     let section = document.querySelectorAll('section');
     for (let i = 0; i < section.length; i++) {
         if(todoList[i].done) {
