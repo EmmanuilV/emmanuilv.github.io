@@ -25,17 +25,16 @@ function deleteTask(target) {
     let id = target.parentElement.id;
     for (let i = 0; i < todoList.length; i++) {
         if (todoList[i].id == id) {
+            console.log("deleted: " + id, todoList[i]);
+
             todoList.splice(i, 1);
             target.parentElement.remove();
-            console.log("deleted: " + id);
         }
     }
 }
 
 function completeTask(target) {
     let id = target.parentElement.parentElement.id;
-    // let todoList[id - 1].done = todoList[id - 1].done;
-
     console.log("Start info: " + id + " - " + todoList[id - 1].done);
 
     if (todoList[id - 1].done) {
@@ -48,9 +47,8 @@ function completeTask(target) {
         console.log("Task Done inside:" + todoList[id - 1].done);
     }
     console.log("Task Done outside:" + todoList[id - 1].done);
-    
+    console.log(todoList);
 }
-
 
 function hideTasks(target) {
     let section = document.querySelectorAll('section');
@@ -78,7 +76,6 @@ function appendTask(task) {
     let dateStrFormat = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`
     todoItem.innerHTML +=
         `<section id="${id}">` +
-        `${id}` +
         `<button onclick="deleteTask(event.target)">&#735</button>` +
             `<div class="title ${isCompleteForTitle(done)}">` +
             `<input type="checkbox"  ${isCompleteForInput(done)} onclick="completeTask(event.target)"/>` +
