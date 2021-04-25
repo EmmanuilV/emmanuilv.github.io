@@ -215,22 +215,8 @@ article p {
     background: #F5D6AB;
 }
 
-.sub-diagram1 {
+.sub-diagrams {
     width: 135.3px;
-    height: 18px;
-    background: #C66C49;
-    margin-top: -5px;
-}
-
-.sub-diagram2 {
-    width: 165.27px;
-    height: 18px;
-    background: #C66C49;
-    margin-top: -5px;
-}
-
-.sub-diagram3 {
-    width: 179.39px;
     height: 18px;
     background: #C66C49;
     margin-top: -5px;
@@ -355,6 +341,10 @@ article p {
     body {
         max-width: none;
     }
+    a {
+        font-size: 18px;
+        line-height: 22px;
+    }
     header {
         background: linear-gradient( rgba(198, 108, 73, 0.4), rgba(198, 108, 73, 0.4)), url(image/bg.png);
         background-repeat: no-repeat;
@@ -380,8 +370,6 @@ article p {
     }
     header nav .links a {
         margin: 32.5px;
-        font-size: 18px;
-        line-height: 22px;
     }
     .header-info {
         margin-top: 11.2%;
@@ -398,10 +386,7 @@ article p {
         line-height: 29px;
         margin-bottom: 8.5%;
     }
-    .header-info a {
-        font-size: 18px;
-        line-height: 22px;
-    }
+
     section {
         justify-content: flex-start;
         align-items: left;
@@ -434,7 +419,8 @@ article p {
         flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
-
+        font-size: 18px;
+        line-height: 25px;
     }
     .skills h2 {
         margin: 0%;
@@ -456,7 +442,10 @@ article p {
         justify-content: space-between;
         width: 100%;
         padding-top: 0;
-        font-size: 18px;
-        line-height: 25px;
     }
+    .skills .tools {
+        font-weight: 600;
+    }
+
+
 }
