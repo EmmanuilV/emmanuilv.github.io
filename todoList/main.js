@@ -4,7 +4,7 @@ class Task {
         this.title = title;
         this.description = description;
         this.done = done;
-        this.dueDate = dueDate;
+        this.dueDate = new Date(dueDate);
     }
 }
 
@@ -21,6 +21,28 @@ let todoList = [
     new Task(9, "9Make Supper", "meat, potato", false, '2021-04-25')
 ]
 
+
+
+let taskForm = document.forms['task'];
+
+taskForm.addEventListener('submit', (event) => {
+    let lastId;
+    for (let i = 0; i < todoList.length; i++) {
+        if (todoList.length > 0) {
+            lastId = todoList[i].id;
+            lastId++;
+        }
+    }
+    event.preventDefault();
+    const formData = new FormData(taskForm);
+    let obj = Object.fromEntries(formData.entries());
+    const task = new Task(lastId, obj.title, obj.description, false, obj.dueDate);
+    todoList.push(task);
+    appendTask(task);
+    taskForm.reset();
+    console.log("Created: " + lastId, todoList[lastId - 1]);
+})
+
 function deleteTask(target) {
     let id = target.parentElement.id;
     for (let i = 0; i < todoList.length; i++) {
@@ -34,26 +56,28 @@ function deleteTask(target) {
 }
 
 function completeTask(target) {
-    let id = target.parentElement.parentElement.id;
-    console.log("Start info: " + id + " - " + todoList[id - 1].done);
+    // let id = target.parentElement.parentElement.id;
+    // console.log("Start info: " + id + " - " + todoList[id - 1].done);
 
-    if (todoList[id - 1].done) {
-        todoList[id - 1].done = false;
-        target.parentElement.classList.remove("task-complete");
-        console.log(todoList[id - 1].done);        
-    } else {
-        todoList[id - 1].done = true;
-        target.parentElement.classList.add("task-complete");
-        console.log("Task Done inside:" + todoList[id - 1].done);
-    }
-    console.log("Task Done outside:" + todoList[id - 1].done);
-    console.log(todoList);
+    // if (todoList[id - 1].done) {
+    //     todoList[id - 1].done = false;
+    //     target.parentElement.classList.remove("task-complete");
+    //     console.log(todoList[id - 1].done);        
+    // } else {
+    //     todoList[id - 1].done = true;
+    //     target.parentElement.classList.add("task-complete");
+    //     console.log("Task Done inside:" + todoList[id - 1].done);
+    // }
+    // console.log("Task Done outside:" + todoList[id - 1].done);
+    // console.log(todoList);
+    let titleBlock = target.closest('DIV');
+    titleBlock.classList.toggle('task-complete')
 }
 
 function hideTasks(target) {
     let section = document.querySelectorAll('section');
     for (let i = 0; i < todoList.length; i++) {
-        if(todoList[i] !== undefined && todoList[i].done) {
+        if (todoList[i] !== undefined && todoList[i].done) {
             console.log(section[i].id, todoList[i]);
             section[i].style.display = 'none';
         }
@@ -63,31 +87,38 @@ function hideTasks(target) {
 function showAllTasks(target) {
     let section = document.querySelectorAll('section');
     for (let i = 0; i < todoList.length; i++) {
-        if(todoList[i] !== undefined && todoList[i].done) {
+        if (todoList[i] !== undefined && todoList[i].done) {
             console.log(section[i].id, todoList[i]);
             section[i].style.display = 'flex';
         }
     }
 }
 
+
+
 function appendTask(task) {
     const { id, title, description, done, dueDate } = task;
-    let date = new Date(dueDate);
-    let dateStrFormat = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`
     todoItem.innerHTML +=
         `<section id="${id}">` +
         `<button onclick="deleteTask(event.target)">&#735</button>` +
-            `<div class="title ${isCompleteForTitle(done)}">` +
-            `<input type="checkbox"  ${isCompleteForInput(done)} onclick="completeTask(event.target)"/>` +
-            `<h3>${title}</h3>` +
+        `<div class="title ${isCompleteForTitle(done)}">` +
+        `<input type="checkbox"  ${isCompleteForInput(done)} onclick="completeTask(event.target)"/>` +
+        `<h3>${title}</h3>` +
         `</div>` +
         `<div class="info">` +
-            `<p>${description}</p>` +
-            `<p ${checkDate(dueDate, done)}>${getDueDate(dateStrFormat)}</p>` +
+        `<p>${emptyDescription(description)}</p>` +
+        `<p ${checkDate(dueDate, done)}>${getDueDate(dueDate)}</p>` +
         `</div>` +
         `</section>`;
 }
 
+function emptyDescription(description) {
+    if (description == undefined ) {
+        return '';
+    } else {
+        return description;
+    }
+}
 
 function isCompleteForTitle(done) {
     if (done) {
@@ -104,10 +135,11 @@ function isCompleteForInput(done) {
 }
 
 function getDueDate(dueDate) {
-    if (dueDate != "" && dueDate != undefined) {
-        return dueDate;
-    } else {
+    if (dueDate === "" || dueDate === undefined || dueDate === null) {
         return "";
+    } else {
+        return dueDate.toDateString();
+
     }
 }
 

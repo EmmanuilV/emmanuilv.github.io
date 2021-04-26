@@ -80,3 +80,15 @@ section button {
     border: 1px solid black;
     border-radius: 4px;
 }
+
+form {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    top: 100px;
+    left: 150px;
+}
+form input {
+    margin: 3px;
+}
