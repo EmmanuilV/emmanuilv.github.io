@@ -130,8 +130,9 @@ function getDueDate(dueDate) {
     if (dueDate === "" || dueDate === undefined || dueDate === null || dueDate == "Invalid Date") {
         return "";
     } else {
-        //return dueDate.split('T')[0];
+        // return dueDate.split('T')[0];
         return dueDate.toDateString();
+
 
     }
 }
