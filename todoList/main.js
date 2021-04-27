@@ -35,7 +35,6 @@ taskForm.addEventListener('submit', (event) => {
     todoList.push(task);
     appendTask(task);
     taskForm.reset();
-    console.log("Created: " + lastId, todoList[lastId - 1]);
 })
 
 function deleteTask(target) {
@@ -48,44 +47,42 @@ function deleteTask(target) {
     }
 }
 
-const unfinishedButton = document.querySelector(".unfinished-task");
 
 function completeTask(target) {
     let titleBlock = target.closest('DIV');
     titleBlock.classList.toggle('task-complete');
-    if (unfinishedButton.classList.contains('on')) {
+    if (document.querySelector('main').classList.contains('active')) {
         titleBlock.closest("SECTION").style.display = 'none';
     }
+
+
 }
 
 function hideTasks(target) {
     let section = document.querySelectorAll('section');
     section.forEach(element => {
-        if(element.querySelector('.title').classList.contains('task-complete')){
+        if (element.querySelector('.title').classList.contains('task-complete')) {
             element.style.display = 'none';
         }
     })
-    
-    if (!target.classList.contains('on')){
+    if (!target.classList.contains('on')) {
         document.querySelector('.buttons .on').classList.remove('on');
         target.classList.add('on');
+        document.querySelector('main').classList.add('active');
     }
-    
 
-}
-
-function activateButton(target) {
 
 }
 
 function showAllTasks(target) {
     let section = document.querySelectorAll('section');
-    section.forEach(element =>{
+    section.forEach(element => {
         element.style.display = 'flex';
     })
-    if (!target.classList.contains('on')){
+    if (!target.classList.contains('on')) {
         document.querySelector('.buttons .on').classList.remove('on');
         target.classList.add('on');
+        document.querySelector('main').classList.remove('active');
     }
 }
 
@@ -108,7 +105,7 @@ function appendTask(task) {
 }
 
 function emptyDescription(description) {
-    if (description == undefined ) {
+    if (description == undefined) {
         return '';
     } else {
         return description;
@@ -133,6 +130,7 @@ function getDueDate(dueDate) {
     if (dueDate === "" || dueDate === undefined || dueDate === null || dueDate == "Invalid Date") {
         return "";
     } else {
+        //return dueDate.split('T')[0];
         return dueDate.toDateString();
 
     }
@@ -150,4 +148,18 @@ function checkDate(dueDate, done) {
 
 }
 
+function showForm(target) {
+    if (!target.classList.contains('show')) {
+        target.classList.add('show');
+        document.querySelector('form').style.display = 'flex';
+    } else {
+        target.classList.remove('show');
+        document.querySelector('form').style.display = 'none';
+    }
+}
+
 todoList.forEach(appendTask);
+
+// fetch('http://127.0.0.1:5000/api/todolists/1/tasks/all')
+//     .then(response => response.json())
+//     .then(todoList => todoList.forEach(appendTask))
