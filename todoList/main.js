@@ -160,7 +160,3 @@ function showForm(target) {
 }
 
 todoList.forEach(appendTask);
-
-// fetch('http://127.0.0.1:5000/api/todolists/1/tasks/all')
-//     .then(response => response.json())
-//     .then(todoList => todoList.forEach(appendTask))
