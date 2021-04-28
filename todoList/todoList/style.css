@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+}
+
+html{
+    height: 100%;
+    background-image: linear-gradient(to right top,#F5E9E9,#a5b1cf);
+    height: auto;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.todo-list {
+    max-width: 1000px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 295px;
+    padding-left: 6px;
+}
+
+section {
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 5px;
+    width: 290px;
+    min-height: 80px;
+    display: flex;
+    background: darkgray;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 7px 5px 5px #032069;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin-top: -15px;
+}
+
+section h3 {
+    margin-left: 16px;
+}
+
+.task-complete {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.info {
+    display: inline;
+    margin-left: 30px;
+    width: 300px;
+}
+
+.over-due-date {
+    color: red;
+}
+
+section button {
+    display: flex;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    margin-left: 275px;
+    background-color: rgba(211, 28, 28, 0.514);
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+form {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    top: 100px;
+    left: 150px;
+}
+form input {
+    margin: 3px;
+}
+
+.on {
+    border: 3px solid rgb(70, 95, 161);
+    background: rgb(153, 210, 229);
+}
+
+.form-hide-button {
+    display: none;
+}
+
+@media screen and (max-width: 1020px) {
+    form {
+        position: fixed;
+        display: none;
+        top: 150px;
+        right: 70px;
+    }
+
+    .form-hide-button {
+        position: fixed;
+        display: block;
+        border-radius: 50%;
+
+        border: none;
+        background-color: rgba(0, 191, 255, 0.5);
+        height: 45px;
+        width: 45px;
+        top: 180px;
+        right: 15px;
+    }
+}
